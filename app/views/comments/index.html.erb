@@ -1,0 +1,6 @@
+<% @comments.each do |comment| %>
+  <div class="comment">
+    <p><%= "#{comment.user} | #{comment.rank} points" %></p>
+    <h3><%= comment.comments %></h3>
+  </div>
+<% end %>
