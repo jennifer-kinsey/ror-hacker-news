@@ -1,0 +1,6 @@
+<% @links.each do |link| %>
+  <div class="link">
+    <h3><%= link_to link.description, link.link_url %></h3>
+    <p><%= "#{link.rank} points by #{link.user}"%> | <%= link_to "comments", link_comments_path(link) %> </p>
+  </div>
+<% end %>
