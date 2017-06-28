@@ -23,6 +23,14 @@ bundle install
 
 * Database creation and initialization
 
+This app uses Postgres for database storage. Please ensure Postgres is running in the background before executing the following command. If it is not running and is present on the machine you can simply open a new terminal window and run:
+
+```
+postgres
+```
+
+If it is up and running, you can move on to creating, initializing, and seeding the database with the next command:
+
 ```
 bundle exec rake db:setup
 ```
