@@ -2,6 +2,8 @@
 
 This app will save the world. Or it maybe is just recreating Hackernews with Faker data.
 
+Check it out on Heroku: https://hackernews-ripoff.herokuapp.com/
+
 # Setup
 
 Required:
