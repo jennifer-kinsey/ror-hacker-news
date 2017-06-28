@@ -29,6 +29,7 @@ class LinksController < ApplicationController
   def update
     @link = Link.find(params[:id])
     if @link.update(link_params)
+      flash[:notice] = "Your link has been ...updated"
       redirect_to link_path(@link)
     else
       render :edit
@@ -37,6 +38,7 @@ class LinksController < ApplicationController
 
   def destroy
     Link.find(params[:id]).destroy
+    flash[:notice] = "Your link has been DESTROYED!"
     redirect_to root_path
   end
 
@@ -48,6 +50,7 @@ class LinksController < ApplicationController
   def create
     @link = Link.new(link_params)
     if @link.save
+      flash[:notice] = "Your link has been SAVED"
       redirect_to links_path
     else
       render :new
