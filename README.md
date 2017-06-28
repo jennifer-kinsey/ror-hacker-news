@@ -1,24 +1,46 @@
-# README
+# Hackernews
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app will save the world. Or it maybe is just recreating Hackernews with Faker data.
 
-Things you may want to cover:
+# Setup
 
-* Ruby version
+Required:
 
-* System dependencies
+* Ruby version 2.2.4
 
-* Configuration
+* Bundle
 
-* Database creation
+Git clone this repo:
+```
+git clone https://github.com/jennifer-kinsey/ror-hacker-news
+```
 
-* Database initialization
+Run Bundle
+
+```
+bundle install
+```
+
+* Database creation and initialization
+
+```
+bundle exec rake db:setup
+```
 
 * How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+rspec
+```
 
 * Deployment instructions
 
-* ...
+Launch Rails:
+
+```
+rails server
+```
+
+If all goes well you should be able to launch the app in your browser at http://localhost:3000/
+
+If you ran into any issues, Google is your friend.
