@@ -13,10 +13,10 @@
       <h3><%= link_to(link.description, link.link_url) %><%= link_to(image_tag("pencil.png", alt: "Edit"), link_path(link)) %></h3>
 
       <%= link_to(
-      image_tag("up.png", alt: "up vote", class: "thumbsize"),
+      image_tag("up.png", alt: "Up Vote", class: "thumbsize"),
        up_vote_path(link), data: {method: "post"}) %> |
 
-      <%= link_to(image_tag("down.png", alt: "down vote", class: "thumbsize"), down_vote_path(link), data: {method: "post"}) %>
+      <%= link_to(image_tag("down.png", alt: "Down Vote", class: "thumbsize"), down_vote_path(link), data: {method: "post"}) %>
 
 
       <p><%= "#{link.rank} #{"point".pluralize(link.rank)} by #{link.user}"%> | <%= link_to "#{link.comments.length} #{"comment".pluralize(link.comments.length)}", link_comments_path(link) %> </p>
