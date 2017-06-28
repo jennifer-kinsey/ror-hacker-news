@@ -1,0 +1,9 @@
+<div>
+  <h3>Description: <%= @link.description %></h3>
+  <h4>URL: <%= @link.link_url%></h4>
+  <h4><%= "#{@link.rank} points"%></h4>
+  <h4><%= "by #{@link.user}"%></h4>
+  <%= link_to(image_tag("pencil.png", alt: "Edit"), edit_link_path(@link)) %></h3>
+  <%= link_to(image_tag("delete.png", alt: "Delete"), link_path(@link), data: {method:
+    "delete"}) %></h3>
+</div>

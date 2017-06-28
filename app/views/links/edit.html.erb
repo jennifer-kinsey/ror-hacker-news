@@ -1,0 +1,9 @@
+<%= form_for @link do |f| %>
+  <%= f.label :description %>
+  <%= f.text_field :description, class: "form-control" %>
+  <%= f.label :link_url %>
+  <%= f.text_field :link_url, class: "form-control" %>
+  <%= f.label :user %>
+  <%= f.text_field :user, class: "form-control" %><br>
+  <%= f.submit class: "btn btn-secondary" %>
+<% end %>

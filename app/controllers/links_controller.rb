@@ -18,7 +18,33 @@ class LinksController < ApplicationController
     redirect_to links_path
   end
 
+  def show
+    @link = Link.find(params[:id])
+  end
+
+  def edit
+    @link = Link.find(params[:id])
+  end
+
+  def update
+    @link = Link.find(params[:id])
+    if @link.update(link_params)
+      redirect_to link_path(@link)
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    Link.find(params[:id]).destroy
+    redirect_to root_path
+  end
+
 private
+  def link_params
+    params.require(:link).permit(:description, :link_url, :user)
+  end
+
 
   def sorted_links
     links = Link.all
