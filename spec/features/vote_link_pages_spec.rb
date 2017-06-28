@@ -10,14 +10,20 @@ describe "the upvote link process" do
   }
 
   before do
-    link.rank = 0
+    link.rank = 1
     link.save
   end
 
   it "upvotes a link" do
     visit root_path
     click_link "Up Vote"
-    expect(page).to have_content "1 point"
+    expect(page).to have_content "2 points"
+  end
+
+  it "downvotes a link" do
+    visit root_path
+    click_link "Down Vote"
+    expect(page).to have_content "0 points"
   end
 
 end

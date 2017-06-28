@@ -17,7 +17,7 @@ Link.destroy_all
     link_url: Faker::Internet.url,
     rank: Faker::Number.between(1, 350),
   )
-  5.times do |index|
+  Faker::Number.between(3, 30).times do |index|
     link.comments.create!(
       user: Faker::RickAndMorty.character,
       comments: Faker::RickAndMorty.quote,
