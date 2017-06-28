@@ -14,3 +14,12 @@
  *= require_tree .
  *= require_self
  */
+
+ .jumbotron {
+    background-color: rgb(255, 102, 0);
+
+    h3 a{
+      color: white;
+      text-decoration: none;
+    }
+ }
