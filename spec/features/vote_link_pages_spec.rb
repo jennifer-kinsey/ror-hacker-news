@@ -9,8 +9,15 @@ describe "the upvote link process" do
     )
   }
 
-  it "upvotes a link" do
+  before do
+    link.rank = 0
+    link.save
+  end
 
+  it "upvotes a link" do
+    visit root_path
+    click_link "Up Vote"
+    expect(page).to have_content "1 point"
   end
 
 end

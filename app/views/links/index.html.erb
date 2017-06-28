@@ -6,7 +6,7 @@
 
       <%= link_to "Up Vote", up_vote_path(link), data: {method: "post"} %> |
       <%= link_to "Down Vote", down_vote_path(link), data: {method: "post"} %>
-      <p><%= "#{link.rank} points by #{link.user}"%> | <%= link_to "comments", link_comments_path(link) %> </p>
+      <p><%= "#{link.rank} #{"point".pluralize(link.rank)} by #{link.user}"%> | <%= link_to "comments", link_comments_path(link) %> </p>
     </div>
   <% end %>
 </div>
