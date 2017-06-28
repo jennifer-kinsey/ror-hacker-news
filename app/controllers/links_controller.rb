@@ -1,7 +1,11 @@
 class LinksController < ApplicationController
 
   def index
-    @links = sorted_links
+    if params[:sort_by] == nil
+      @links = Link.descending_by_rank
+    else
+      @links = Link.send(params[:sort_by])
+    end
   end
 
   def up_vote
@@ -62,9 +66,4 @@ private
     params.require(:link).permit(:description, :link_url, :user)
   end
 
-
-  def sorted_links
-    links = Link.all
-    links.sort { |x,y| y.rank <=> x.rank }
-  end
 end
